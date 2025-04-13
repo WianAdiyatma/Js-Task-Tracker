@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Tracker</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .text {
+        word-wrap: break-word; /* Break long words */
+        overflow-wrap: break-word; /* Modern alternative to word-wrap */
+        max-width: 200px;
+        /* Optional: add some padding or margin */
+        padding: 0 10px;
+      }
+
+      .input-container {
+        border: 2px solid black;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        width: 400px;
+        padding: 5px;
+        transition: box-shadow 0.3s ease; /* Smooth effect */
+        color: transparent;
+      }
+
+      .input-container:focus-within {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Adds a subtle shadow */
+      }
+
+      input {
+        border: none;
+        width: 300px;
+        outline: none;
+      }
+
+      .btn,
+      .delete {
+        background-color: red;
+        border-radius: 15px;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      .checkmark {
+        border: 2px solid black;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+
+      .task {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: space-between;
+        width: 300px;
+        overflow: hidden;
+        border-bottom: 2px solid #888;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Task Tracker</h3>
+    <div class="input-container">
+      <input
+        type="text"
+        placeholder="Start writing and press enter to create a task"
+        maxlength="25"
+      />
+      <button class="btn">Enter</button>
+    </div>
+
+    <div class="task">
+      <p class="checkmark"></p>
+      <p class="text">New Task</p>
+      <button class="delete">Del</button>
+    </div>
+    <div class="task">
+      <p class="checkmark"></p>
+      <p class="text">New Task</p>
+      <button class="delete">Del</button>
+    </div>
+    <div class="task">
+      <p class="checkmark"></p>
+      <p class="text">New Task</p>
+      <button class="delete">Del</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
